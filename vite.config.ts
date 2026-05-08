@@ -1,16 +1,16 @@
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-import tailwindcss from "@tailwindcss/vite";
-import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-// GitHub Pages: site served at https://<user>.github.io/smartcart/ when repo name is smartcart.
+// GitHub Pages: https://<user>.github.io/SmartCart/
 export default defineConfig({
-  base: "/smartcart/",
   plugins: [react(), tailwindcss()],
+  base: "/SmartCart/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"),
